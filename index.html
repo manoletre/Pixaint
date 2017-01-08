@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PIXAINT</title>
+
+    <link rel="stylesheet" href="main.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.js"></script>
+    <script type="text/javascript" src="https://use.fontawesome.com/d1f8eee7ff.js"></script>
+    <script type="text/javascript" src="design.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <div id="screen">
+      <!-- grid -->
+  		<div id="wrapper">
+  			<div id="grid"></div>
+  		</div>
+
+      <!-- navigation bar -->
+      <nav onmouseover="rotate()" onmouseout="stopRotating()">
+        <br>
+        <i class="fa fa-cog fa-3x" aria-hidden="true" id="navconfig"></i>
+        <br><br>
+        <hr>
+        <br>
+        <div id="new" class="button nav" onclick="newAlert()">
+          <span>NEW</span>
+        </div>
+        <div id="color" class="button nav" onclick="colorAlert()">
+          <span>COLOR</span>
+        </div>
+        <div id="erase" class="button nav" onclick="startEraser()">
+          <span>ERASER</span>
+        </div>
+        <div id="margins" class="button nav" onclick="toggleMargins()">
+          <span>MARGINS ON</span>
+        </div>
+        <div id="export" class="button nav" onclick="exportAlert()">
+          <span>EXPORT TO CSS</span>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div id="help" class="button nav" onclick="help()">
+          <span>HELP</span>
+        </div>
+        <div id="credits">
+          <i class="fa fa-copyright fa-fw" aria-hidden="true"></i>
+          <p>made by Manuel Cárdenas</p>
+        </div>
+      </nav>
+
+      <!-- alerts -->
+      <div class="alert" id="new_alert">
+        <div class="in_alert">
+  				<div class="exit_alert" onclick="exitAlert()"><b>X</b></div>
+          <h3>Grid size:</h3>
+          <span>Columns:</span><br>
+      		<input type="number" name="columns" placeholder="16" id="columns_nr"><br><br>
+      		<span>Rows:</span><br>
+      		<input type="number" name="rows" placeholder="16" id="rows_nr"><br><br>
+          <h3>File name:</h3>
+          <input type="text" name="file_name" id="file_name" placeholder="Best drawing. Ever."><br><br>
+      		<div id="submit_new" class="button" onclick="newFile()">
+            <span>SUBMIT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert" id="color_alert">
+        <div class="in_alert">
+  				<div class="exit_alert" onclick="exitAlert()"><b>X</b></div>
+          <h3>Select your color:</h3>
+      		<input type="color" name="color" id="select_color">
+          <input type="text" name="color" id="text_color"><br><br>
+          <div id="submit_color" class="button" onclick="selectColor()">
+            <span>SUBMIT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert" id="export_alert">
+        <div class="in_alert">
+  				<div class="exit_alert" onclick="exitAlert()"><b>X</b></div>
+          <h3>DOWNLOAD CSS CODE</h3>
+  				<br>
+      		<div id="download_file_html" class="button downloadBtn" onclick="downloadHtml()">
+            <span>AS HTML FILE</span>
+          </div>
+          <div id="download_file_txt" class="button downloadBtn" onclick="downloadTxt()">
+            <span>AS TXT FILE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
