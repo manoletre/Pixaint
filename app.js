@@ -1,11 +1,12 @@
 $(document).on("ready", init());
 
-var columns, rows, gridW, color, current, painting, selecting, erasing, isDown, start, css, fileNameOriginal, fileName, margins, dividor;
+var columns, rows, gridW, color, current, painting, selecting, erasing, isDown, start, css, fileNameOriginal, fileName, margins, dividor, wrapperW, wrapperH;
 
 function init(){
 	start = {};
 	css = {};
 	margins = "ON";
+	dividor = 27;
 	fileNameOriginal = "Best drawing. Ever."
 	$(document).on("mouseup", function(){
 		isDown = false
@@ -18,6 +19,9 @@ function newFile(){
   columns = parseInt(columns);
   rows = $("#rows_nr").val();
   rows = parseInt(rows);
+
+	wrapperW = columns * 25;
+	wrapperH = rows * 25;
 
 	fileNameOriginal = $("#file_name").val();
 	$("title").html(fileNameOriginal);
@@ -152,7 +156,6 @@ function downloadFile(){
 		}
 	}
 
-	//calculating distances between pixels
 	for (var i = 0; i < start.sib.length; i++) {
 		start.sib[i].distance = {
 			side: Math.round(($(start.pixel).offset().left - $(start.sib[i]).offset().left)/dividor),
@@ -179,9 +182,9 @@ function downloadFile(){
 
 	//creating file to download and downloading it
 	if($(start.pixel).html() == "x"){
-		html = "<div class='wrapper' id=\"wrapper\"><div class='pixel' id=\"startPixel\"></div></div><style>.wrapper#wrapper{/*width, height*/} .pixel#startPixel{width: 25px; height: 25px; box-shadow: " + css.code + ";} </style>";
+		html = "<div class='wrapper' id=\"wrapper\"><div class='pixel' id=\"startPixel\"></div></div><style>.wrapper#wrapper{width: " + wrapperW + "px; height: " + wrapperH + "px; } .pixel#startPixel{width: 25px; height: 25px; box-shadow: " + css.code + ";} </style>";
 	}else{
-		html = "<div class='wrapper' id=\"wrapper\"><div class='pixel' id=\"startPixel\"></div></div><style>.wrapper#wrapper{/*width, height*/} .pixel#startPixel{background-color: " + $(start.pixel).css("background-color") + "; width: 25px; height: 25px; box-shadow: " + css.code + ";} </style>";
+		html = "<div class='wrapper' id=\"wrapper\"><div class='pixel' id=\"startPixel\"></div></div><style>.wrapper#wrapper{width: " + wrapperW + "px; height: " + wrapperH + "px; } .pixel#startPixel{background-color: " + $(start.pixel).css("background-color") + "; width: 25px; height: 25px; box-shadow: " + css.code + ";} </style>";
 	}
 	var download = new File([html], "download.txt", {type: "text/plain;charset=utf-8"})
 	saveAs(download, fileName);

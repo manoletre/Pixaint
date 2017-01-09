@@ -11,6 +11,7 @@ In the "samples" folder you can find the superman logo and a retro mario done wi
 1. Motivation behind the project
 2. The code
 3. For contributors
+4. Thank you note
 
 ## Motivation behind the project
 
@@ -43,8 +44,19 @@ Feel free to change whatever you think that has to be changed. If you think the 
 
 Also, I am 17 and this is the first project I upload to GitHub. I am very glad to read every correction you have for me (Even if those are grammar/spelling mistakes) so just don´t keep anything.
 
-Thanks a lot for taking time to dive into this project,
+##### to do list
 
-Sincerely,
+Here is a listo of things I think that should be added in next updates, but, as said before, any improvement you can think of is very welcome.
 
-Manuel Cárdenas
+1. Import previously exported css codes so that you can edit your pixel art
+2. User should be able to change square sizes, something like a zoom.
+3. add a ctrl-z option, so you can undo your mistakes
+4. add a preview option, so that you can preview you pixel art
+
+#### Thank you note
+
+I am not only gratefull to those who are willing to contribute, those who are contributing and those who already contributed in this project. I am gratefull to anybody that takes the time to read this readme, that messages me with improvement ideas or that simply uses **Pixaint**
+
+Anyway, thanks a lot,
+
+Manuel Cárdenas - *manoletre99*
