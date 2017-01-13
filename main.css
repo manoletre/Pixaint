@@ -18,6 +18,13 @@ p{
 	margin: 0;
 	padding: 0;
 }
+a{
+  color: #000;
+  transition: all 0.2s;
+}
+a:hover{
+  color: #aaa;
+}
 
 nav{
 	width: 50px;
@@ -69,6 +76,13 @@ nav:hover{
   text-align: right;
 }
 
+.nav i{
+  float: left;
+}
+.nav i:before{
+  margin-left: 20px;
+}
+
 .button:hover{color: #999;}
 .button:active{color: #ddd;}
 
@@ -101,7 +115,15 @@ nav:hover{
 }
 
 /*alert div*/
-.alert{position: absolute; left: 50%; top: 20%;display: none;}
+.alert{
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  display: none;
+}
+#new_alert{
+  display: block;
+}
 
 .in_alert{
   position: relative;
@@ -166,6 +188,9 @@ input[type="color"]{
 input#text_color{
 	width: 47%;
 	float: right;
+}
+#color2{
+  margin-left: 18%;
 }
 
 input[type="color"]:hover{

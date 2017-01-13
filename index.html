@@ -32,29 +32,35 @@
         <hr>
         <br>
         <div id="new" class="button nav" onclick="newAlert()">
+          <i class="fa fa-folder-open" aria-hidden="true"></i>
           <span>NEW</span>
         </div>
         <div id="color" class="button nav" onclick="colorAlert()">
+          <i class="fa fa-paint-brush" aria-hidden="true"></i>
           <span>COLOR</span>
         </div>
         <div id="erase" class="button nav" onclick="startEraser()">
+          <i class="fa fa-eraser" aria-hidden="true"></i>
           <span>ERASER</span>
         </div>
         <div id="margins" class="button nav" onclick="toggleMargins()">
+          <i class="fa fa-crop" aria-hidden="true"></i>
           <span>MARGINS ON</span>
         </div>
         <div id="export" class="button nav" onclick="exportAlert()">
+          <i class="fa fa-file-code-o" aria-hidden="true"></i>
           <span>EXPORT TO CSS</span>
         </div>
         <br>
         <hr>
         <br>
         <div id="help" class="button nav" onclick="help()">
+          <i class="fa fa-question" aria-hidden="true"></i>
           <span>HELP</span>
         </div>
         <div id="credits">
           <i class="fa fa-copyright fa-fw" aria-hidden="true"></i>
-          <p>made by Manuel Cárdenas</p>
+          <p>made by <a href="https://github.com/manoletre99">Manuel Cárdenas</a></p>
         </div>
       </nav>
 
@@ -64,13 +70,13 @@
   				<div class="exit_alert" onclick="exitAlert()"><b>X</b></div>
           <h3>Grid size:</h3>
           <span>Columns:</span><br>
-      		<input type="number" name="columns" placeholder="16" id="columns_nr"><br><br>
+      		<input type="number" name="columns" value="16" id="columns_nr"><br><br>
       		<span>Rows:</span><br>
-      		<input type="number" name="rows" placeholder="16" id="rows_nr"><br><br>
+      		<input type="number" name="rows" value="16" id="rows_nr"><br><br>
           <h3>File name:</h3>
-          <input type="text" name="file_name" id="file_name" placeholder="Best drawing. Ever."><br><br>
+          <input type="text" name="file_name" id="file_name" value="untitled"><br><br>
       		<div id="submit_new" class="button" onclick="newFile()">
-            <span>SUBMIT</span>
+            <span>START</span>
           </div>
         </div>
       </div>
@@ -79,10 +85,14 @@
         <div class="in_alert">
   				<div class="exit_alert" onclick="exitAlert()"><b>X</b></div>
           <h3>Select your color:</h3>
+          <br>
+          <span id="color1">By choosing it:</span>
+          <span id="color2">or typing it:</span>
+          <br>
       		<input type="color" name="color" id="select_color">
-          <input type="text" name="color" id="text_color"><br><br>
+          <input type="text" name="color" id="text_color" value="#000000"><br><br>
           <div id="submit_color" class="button" onclick="selectColor()">
-            <span>SUBMIT</span>
+            <span>SELECT</span>
           </div>
         </div>
       </div>

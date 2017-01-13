@@ -63,11 +63,9 @@ function exitAlert(){
 
 //to rotate or stop rotating the options logo
 function rotate(){
-  $("#navconfig").addClass("fa-spin");
   $("#credits").css("display", "block");
 }
 function stopRotating(){
-  $("#navconfig").removeClass("fa-spin");
   $("#credits").css("display", "none");
 }
 

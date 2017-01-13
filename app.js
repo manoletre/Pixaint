@@ -7,6 +7,8 @@ function init(){
 	css = {};
 	margins = "ON";
 	dividor = 27;
+	painting = true;
+	color = "#000000"
 	fileNameOriginal = "Best drawing. Ever."
 	$(document).on("mouseup", function(){
 		isDown = false
@@ -16,14 +18,26 @@ function init(){
 
 function newFile(){
   columns = $("#columns_nr").val();
+	if(columns === ""){
+		alert("how many columns will your file have?");
+		return;
+	}
   columns = parseInt(columns);
   rows = $("#rows_nr").val();
+	if(rows === ""){
+		alert("how many rows will your file have?");
+		return;
+	}
   rows = parseInt(rows);
 
 	wrapperW = columns * 25;
 	wrapperH = rows * 25;
 
 	fileNameOriginal = $("#file_name").val();
+	if(fileNameOriginal === ""){
+		alert("you need to give your file a name!");
+		return;
+	}
 	$("title").html(fileNameOriginal);
 
   $(".alert#new_alert").css("display", "none");
