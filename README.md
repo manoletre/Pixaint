@@ -2,6 +2,8 @@
 
 Pixaint is a pixel art paint that returns a css code. So if you want to add some pixel art to you website you just have to paste the html & css code you get in the code of your website.  
 
+Link to pixaint: https://manoletre99.github.io/Pixaint/
+
 In the "samples" folder you can find the superman logo and a retro mario done with **Pixaint**.
 
 ###Content
