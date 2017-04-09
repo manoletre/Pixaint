@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "jquery": true
+    },
+    "extends": "airbnb-base/legacy",
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-tabs": [
+            "off"
+        ]
+    }
+}
